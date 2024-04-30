@@ -16,7 +16,7 @@ class MFG2110Comms():
         try:
             ser = serial.Serial(port,baudrate,timeout=timeout)
             if ser.isOpen:
-                print("You are connected to port:" + port)
+                print("MFG2110 connected to port:" + port)
 
         except Exception as e:
             print(e)
@@ -67,7 +67,7 @@ class MFG2110Comms():
 
 ## close communication
     def close_comms(self) -> None:
-        s.close()
+        ser.close()
         print("MFG2110Comms: Closed.")
 
 
